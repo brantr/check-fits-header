@@ -9,6 +9,9 @@ if(len(sys.argv)>1):
 print("Checking header for ", fname)
 
 hdulist = fits.open(fname)
+
+hdulist.info()
+
 header = hdulist[0].header
 #print(header)
 print(repr(header))
